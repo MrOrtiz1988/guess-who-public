@@ -7,7 +7,6 @@ function onReady(){
     displayImages();
     $('.click-on').text(displayRandomName());
     $('.container').on('click', '.image', handleThisImage);
-    
 }
 
 function randomNumber(array){
@@ -32,8 +31,36 @@ function handleThisImage(){
 
     if($(this).attr("alt") === `Profile image of ${$('.click-on').text()}`){
         alert('Success!!!, on to the next...');
-        $('.click-on').text(displayRandomName())
+        animation();
+        $('.click-on').text(displayRandomName());
     }else{
         alert('Wrong, Try Again');
     }
+}
+
+function animation(){
+    setTimeout(() => {
+        $('body').css('background-color', 'yellow');
+      }, 0);
+      setTimeout(() => {
+        $('body').css('background-color', 'white');
+      }, 500);
+      setTimeout(() => {
+        $('body').css('background-color', 'yellow');
+      }, 1000);
+      setTimeout(() => {
+        $('body').css('background-color', 'white');
+      }, 1500);
+      setTimeout(() => {
+        $('body').css('background-color', 'yellow');
+      }, 2000);
+      setTimeout(() => {
+        $('body').css('background-color', 'white');
+      }, 2500);
+      setTimeout(() => {
+        $('body').css('background-color', 'yellow');
+      }, 3000);
+      setTimeout(() => {
+        $('body').css('background-color', 'white');
+      }, 3500);
 }
